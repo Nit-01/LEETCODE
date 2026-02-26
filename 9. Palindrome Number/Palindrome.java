@@ -12,12 +12,19 @@ Input: x = -121
 Output: false
 */
 
-class Solution {
-    public boolean isPalindrome(int x) {
+import java.util.*;
+class Palindrome{
+    public static void main(String[]args){
+        Scanner sn=new Scanner(System.in);
+        int n=sn.nextInt();
+        int num=Math.abs(n);
+        int rev=0;
 
-        String str=Integer.toString(x);
-        String rev=new StringBuilder(str).reverse().toString();
-        return str.equals(rev);
-        
+        while(num>0){
+            int digit=num%10;
+            rev=rev*10+digit;
+            num/=10;
+        }
+        System.out.println(n==rev);
     }
 }
