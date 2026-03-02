@@ -1,5 +1,4 @@
 /*
-threeDigitLargestNumber
 Example 1:
 
 Input: num = "6777133339"
