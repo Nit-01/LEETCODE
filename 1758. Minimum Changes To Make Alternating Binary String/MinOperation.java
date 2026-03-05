@@ -1,5 +1,3 @@
-//1758. Minimum Changes To Make Alternating Binary String
-
 /*
 Input: s = "0100"
 Output: 1
