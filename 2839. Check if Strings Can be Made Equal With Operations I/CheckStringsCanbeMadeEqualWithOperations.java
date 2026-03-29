@@ -14,6 +14,26 @@ Output: false
 Explanation: It is not possible to make the two strings equal.
 
 */
+import java.util.*;
+
 class CheckStringsCanbeMadeEqualWithOperations {
-    
+    public static void main(String[]args){
+        Scanner sn=new Scanner(System.in);
+        String s1=sn.nextLine();
+        String s2=sn.nextLine();
+
+        System.out.println(issimilar(s1, s2));
+
+    }
+    public static boolean issimilar(String s1,String s2){
+        boolean c1=((s1.charAt(0)==s2.charAt(0) && s1.charAt(2)==s2.charAt(2)) || (s1.charAt(0)==s2.charAt(2) && s1.charAt(2)==s2.charAt(0)));
+        
+        boolean c2=((s1.charAt(1)==s2.charAt(1) && s1.charAt(3)==s2.charAt(3)) || (s1.charAt(1)==s2.charAt(3) && s1.charAt(3)==s2.charAt(1)));
+
+        if(c1 && c2){
+            return true;
+        }
+
+        return false;
+    }
 }
